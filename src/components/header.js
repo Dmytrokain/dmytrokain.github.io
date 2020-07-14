@@ -1,5 +1,6 @@
 import { Link, useStaticQuery, graphql } from "gatsby"
 import React from "react"
+
 import headerStyles from './header.module.css'
 import TwitterIcon from '../images/twitter.png'
 import GithubIcon from '../images/github.png'

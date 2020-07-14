@@ -2,7 +2,8 @@ module.exports = {
   siteMetadata: {
     title: `Ginger Blog`,
     twitterLink: `https://twitter.com/dmytrokain`,
-    githubLink: `https://github.com/Dmytrokain`
+    githubLink: `https://github.com/Dmytrokain`,
+    author: `Dmytro Kayinskyy`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
