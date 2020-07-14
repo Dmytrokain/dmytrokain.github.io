@@ -1,0 +1,22 @@
+article {
+  padding: 15px;
+  margin-bottom: 40px;
+
+}
+
+article:hover {
+  background-color: rgb(245, 223, 191);
+}
+
+.post-header {
+  margin-bottom: 15px;
+}
+
+.post-header a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.post-description {
+  margin-top: 10px;
+}
