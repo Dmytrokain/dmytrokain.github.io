@@ -2,33 +2,27 @@ import React from "react"
 import Layout from "../components/layout"
 import { graphql } from "gatsby"
 
+export const query = graphql`
+  query($slug: String!) {
+    markdownRemark(fields: {slug: {eq: $slug}}) {
+      frontmatter {
+        date
+        description
+        title
+      }
+      html
+    }
+  }
+`
 
-const Post = ({ data: { post } }) => {
+const Post = (props) => {
+  console.log(props)
   return (
     <Layout>
-          <>
-          <h1>{post.document.name}</h1>
-          <p>{post.document.createdTime}</p>
-          <div
-              dangerouslySetInnerHTML={{__html: post.childMarkdownRemark.html}}
-          />
-      </>
+       <div dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html}}></div>  
     </Layout>
   )
 }
 
-export const query = graphql`
-  query($path: String) {
-    post: googleDocs(document: {path: {eq: $path}}) {
-      document {
-        createdTime(formatString: "")
-        name
-      }
-      childMarkdownRemark {
-        html
-      }
-    }
-  }
-`
 
 export default Post
