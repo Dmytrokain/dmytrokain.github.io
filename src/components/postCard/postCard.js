@@ -1,14 +1,14 @@
 import React from "react"
 import { Link } from "gatsby"
-import postStyles from "../components/post.module.css"
+import postCardStyles from "./postCard.module.css"
 
 const PostCard = ({ data }) => {
   const { title, date, description, readTime } = data.frontmatter
 
   return (
-    <article className={postStyles.article}>
+    <article className={postCardStyles.article}>
       <header>
-        <h3 className={postStyles.postHeader}>
+        <h3 className={postCardStyles.postHeader}>
           <Link to={data.fields.slug}>
               {title}
           </Link>
@@ -17,7 +17,7 @@ const PostCard = ({ data }) => {
             <p>{date} ⌛ {readTime} min read</p>
           </small>
 
-        <p className={postStyles.postDescription}>{description}</p>
+        <p className={postCardStyles.postDescription}>{description}</p>
       </header>
     </article>
   )

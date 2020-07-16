@@ -1,0 +1,34 @@
+.post-container {
+  /* display: flex; */
+  
+  margin: 15px 0px 20px 0px;
+  /* background-color: rgb(244, 246, 230); */
+}
+
+.post-header h1{
+  padding: 20px 0px 10px 0px;
+  font-size: 40px;
+}
+
+.post-header p {
+  margin-bottom: 35px;
+}
+
+.post-body h1, h2 {
+  padding: 20px 0px 20px 0px;
+}
+
+.post-body p {
+  padding-bottom: 10px;
+}
+
+.post-body li {
+  margin-left: 20px;
+}
+
+
+@media (max-width: 480px) {
+  .post-header h1{
+    padding-top: 10px;
+  }
+}

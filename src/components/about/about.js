@@ -2,7 +2,7 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 import React from "react"
 
 import aboutStyles from './about.module.css'
-import AvatarIcon from '../images/avatar.jpeg'
+import AvatarIcon from '../../images/avatar.jpeg'
 
 
 const About = () => {
@@ -21,7 +21,7 @@ const About = () => {
 
   return (
     <div className={aboutStyles.aboutContainer}>
-      <img src={AvatarIcon}></img>
+      <img className={aboutStyles.avatar} src={AvatarIcon}></img>
       <p className={aboutStyles.aboutDescription}>
           Personal blog by&nbsp;
           <a href={twitterLink} style={{textDecoration: 'none'}}>{author}.</a>

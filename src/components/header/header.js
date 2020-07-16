@@ -2,9 +2,9 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 import React from "react"
 
 import headerStyles from './header.module.css'
-import TwitterIcon from '../images/twitter.png'
-import GithubIcon from '../images/github.png'
-
+import TwitterIcon from '../../images/twitter.png'
+import GithubIcon from '../../images/github.png'
+  
 const Header = () => {
   const data = useStaticQuery(graphql`
     query SiteMetadataQuery {

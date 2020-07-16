@@ -1,7 +1,7 @@
 import React from "react"
-import blogFeedStyles from "../components/blogFeed.module.css"
+import blogFeedStyles from "./blogFeed.module.css"
 
-import PostCard from "./postCard"
+import PostCard from "../postCard/postCard"
 import { useStaticQuery, graphql } from "gatsby"
 
 const BlogFeed = () => {
