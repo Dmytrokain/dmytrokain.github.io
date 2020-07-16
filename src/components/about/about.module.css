@@ -7,11 +7,9 @@
 }
 
 .about-description {
-  font-size: 20px;
+  font-size: 25px;
   padding-left: 15px;
   margin: 15px;
-
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .avatar {
@@ -23,7 +21,7 @@
 
 @media (max-width: 480px) {
   .aboutContainer {
-    padding: 15px 0px 5px 0px;
+    padding: 15px 0px 15px 0px;
   }
   
   .about-description {

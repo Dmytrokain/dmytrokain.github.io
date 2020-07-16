@@ -1,11 +1,11 @@
 article {
   padding: 15px;
   margin-bottom: 40px;
-
+  background-color: rgb(246, 230, 205) ;
 }
 
 article:hover {
-  background-color: rgb(245, 223, 191);
+  background-color: rgb(243, 219, 183);
 }
 
 .post-header {

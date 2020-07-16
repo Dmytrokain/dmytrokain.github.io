@@ -1,10 +1,10 @@
-* {
-  box-sizing: border-box;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  margin: 0;
-  padding: 0;
-}
+.content {
+  display: flex;
+  flex-direction: column;
 
-body {
-  background-color: rgb(243, 232, 215);
+  margin: 0 auto;
+  padding: 0 1.0875rem 1.45rem;
+
+  min-height: calc(100vh - 82px - 51px);
+  max-width: 960px;
 }
