@@ -1,4 +1,6 @@
 article {
+  display: flex;
+  justify-content: space-between;
   padding: 15px;
   margin-bottom: 20px;  
   background-color: rgb(245, 235, 219);
@@ -8,15 +10,41 @@ article:hover {
   background-color: rgb(243, 219, 183);
 }
 
+.post-header-container {
+  flex: 1;
+  padding-right: 100px;
+}
+
 .post-header {
   margin-bottom: 15px;
 }
 
 .post-header a {
+  font-size: 24px;
   text-decoration: none;
   color: inherit;
 }
 
 .post-description {
-  margin-top: 10px;
+  font-style: italic;
+  margin-top: 14px;
+}
+
+.image {
+  margin-right: 20px;
+}
+
+@media (max-width: 480px) {
+  .post-header-container {
+    padding-right: 10px;
+  }
+
+  .image {
+    max-width: 100px;
+    max-height: 100px;
+  }
+
+  .post-description {
+    display: none;
+  }
 }

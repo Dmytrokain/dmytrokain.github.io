@@ -15,6 +15,13 @@ const BlogFeed = () => {
             title
             description
             readTime
+            image {
+            childImageSharp {
+              fixed(height: 200, width: 230) {
+                ...GatsbyImageSharpFixed  
+              }
+            }
+           }
           }
           fields {
             slug
@@ -27,11 +34,19 @@ const BlogFeed = () => {
 
   return (
     <div className={blogFeedStyles.feedContainer}>
-      <div>Blog Posts</div>
+      <div style={{margin: '16px'}}>Blog Posts</div>
       
-      { data.allMarkdownRemark.nodes.map( (post) => 
-        <PostCard data={post}/>
-      )}
+      { data.allMarkdownRemark.nodes.map( (post) => {
+        const { title, date, description, readTime, image } = post.frontmatter
+        
+        return <PostCard title={title}
+                         date={date}
+                         description={description}
+                         readTime={readTime}
+                         slug={post.fields.slug}
+                         image={image}
+                />
+      })}
     </div>
   )
 }

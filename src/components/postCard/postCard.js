@@ -1,15 +1,19 @@
 import React from "react"
 import { Link } from "gatsby"
 import postCardStyles from "./postCard.module.css"
+import Image from 'gatsby-image'
 
-const PostCard = ({ data }) => {
-  const { title, date, description, readTime } = data.frontmatter
-
+const PostCard = ({ title, date, description, readTime, image, slug }) => {
   return (
     <article className={postCardStyles.article}>
-      <header>
+      {image && (
+        <Link to={slug} style={{margin: '0'}}>
+          <Image className={postCardStyles.image} fixed={image.childImageSharp.fixed} />
+        </Link>
+      )}
+      <header className={postCardStyles.postHeaderContainer}>
         <h3 className={postCardStyles.postHeader}>
-          <Link to={data.fields.slug}>
+          <Link to={slug}>
               {title}
           </Link>
         </h3>
