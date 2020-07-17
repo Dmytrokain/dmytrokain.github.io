@@ -28,6 +28,22 @@ exports.createPages = async ({ graphql, actions }) => {
               slug
             }
           }
+          previous {
+            fields {
+              slug
+            }
+            frontmatter {
+              title
+            }
+          }
+          next {
+            fields {
+              slug
+            }
+            frontmatter {
+              title
+            }
+          }
         }
       }
     }
@@ -38,10 +54,12 @@ exports.createPages = async ({ graphql, actions }) => {
 
     result.data.allMarkdownRemark.edges.forEach(edge => {
       createPage({
-        path: `${edge.node.fields.slug}`,
+        path: edge.node.fields.slug,
         component: postTemplate,
         context: {
-          slug: `${edge.node.fields.slug}`
+          slug: edge.node.fields.slug,
+          previousPage: edge.previous,
+          nextPage: edge.next,
         }
       })
     })

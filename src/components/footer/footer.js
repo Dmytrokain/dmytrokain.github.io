@@ -17,7 +17,16 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <div className={footerStyles.footer}> Created by @{data.site.siteMetadata.author} {currentYear}</div>
+    <div className={footerStyles.footer}>
+      <ul style={{display: "flex"}}>
+        <li>
+          <a>Twitter</a>
+        </li>
+        <li>
+          <a>Github</a>
+        </li>
+      </ul>
+    </div>
   )
 }
 

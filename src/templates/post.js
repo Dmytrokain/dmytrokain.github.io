@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 
 import Layout from "../components/layout/layout"
 import postStyles from "./post.module.css"
@@ -19,6 +19,7 @@ export const query = graphql`
 `
 
 const Post = (props) => {
+  const { previousPage, nextPage } = props.pageContext
   const { title, date, readTime } = props.data.markdownRemark.frontmatter
 
   return (
@@ -33,6 +34,28 @@ const Post = (props) => {
         
         <div className={postStyles.postBody}
              dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html}} />
+        
+        <nav style={{
+           margin: "60px 20px 20px 20px"
+        }}>
+          <ul style={{  
+            display: 'flex',
+            justifyContent: 'space-between',
+            listStyle: 'none'
+          }}>
+            
+            {previousPage && (
+              <li>
+                <Link to={`/${previousPage.fields.slug}`}>⟸ {previousPage.frontmatter.title}</Link>
+              </li>
+            )}
+            {nextPage && (
+              <li>
+                <Link to={`/${nextPage.fields.slug}`}>{nextPage.frontmatter.title} ⟹</Link>
+              </li>
+            )}
+          </ul>
+        </nav>
       </div>
     </Layout>
   )
