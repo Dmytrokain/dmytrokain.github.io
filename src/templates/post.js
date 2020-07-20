@@ -30,6 +30,7 @@ const Post = (props) => {
           <small>
             <p>{date} ⌛ {readTime} min read</p>
           </small>
+        <div className={postStyles.borderLine}></div>
         </div>
         
         <div className={postStyles.postBody}

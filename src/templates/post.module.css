@@ -1,8 +1,11 @@
 .post-container {
   /* display: flex; */
-  
   margin: 15px 0px 20px 0px;
   /* background-color: rgb(244, 246, 230); */
+}
+
+.post-header {
+  margin-bottom: 35px;
 }
 
 .post-header h1{
@@ -11,7 +14,7 @@
 }
 
 .post-header p {
-  margin-bottom: 35px;
+  margin-bottom: 15px;
 }
 
 .post-body h1, h2 {
@@ -19,6 +22,8 @@
 }
 
 .post-body p {
+  line-height: 30px;
+  font-size: 17px;  
   padding-bottom: 10px;
 }
 
@@ -26,6 +31,10 @@
   margin-left: 20px;
 }
 
+.border-line {
+  border-bottom: 2px solid rgb(246, 184, 129);
+  width: 167px;
+}
 
 @media (max-width: 480px) {
   .post-header h1{

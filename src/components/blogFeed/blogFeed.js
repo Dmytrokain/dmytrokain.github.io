@@ -17,7 +17,7 @@ const BlogFeed = () => {
             readTime
             image {
             childImageSharp {
-              fixed(height: 200, width: 230) {
+              fixed(height: 200, width: 300) {
                 ...GatsbyImageSharpFixed  
               }
             }
