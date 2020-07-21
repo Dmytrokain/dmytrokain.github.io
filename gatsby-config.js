@@ -3,6 +3,7 @@ module.exports = {
     title: `Ginger Blog`,
     twitterLink: `https://twitter.com/dmytrokain`,
     githubLink: `https://github.com/Dmytrokain`,
+    email: `dimikowowik@gmail.com`,
     author: `Dmytro Kayinskyy`
   },
   plugins: [

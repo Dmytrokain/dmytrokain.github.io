@@ -24,7 +24,7 @@ const About = () => {
       <img className={aboutStyles.avatar} src={AvatarIcon}></img>
       <p className={aboutStyles.aboutDescription}>
           Personal blog by&nbsp;
-          <a href={twitterLink} style={{textDecoration: 'none'}}>{author}.</a>
+          <Link to='/aboutMe' style={{textDecoration: 'none'}}>{author}.</Link>
           <br/>
           Me and my daily routine.
       </p>
