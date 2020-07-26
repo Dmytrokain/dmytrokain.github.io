@@ -8,7 +8,7 @@ import BlogFeed from "../components/blogFeed/blogFeed"
 
 const IndexPage = () => (
   <Layout>
-    <About />
+    {/* <About /> */}
     <BlogFeed />
   </Layout>
 )

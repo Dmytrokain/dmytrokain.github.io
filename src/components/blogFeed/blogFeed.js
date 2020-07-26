@@ -17,8 +17,8 @@ const BlogFeed = () => {
             readTime
             image {
               childImageSharp {
-              fixed(height: 500, width: 880) {
-                ...GatsbyImageSharpFixed  
+              fixed(height: 500, width: 890) {
+                ...GatsbyImageSharpFixed    
               }
             }
            }
@@ -34,7 +34,10 @@ const BlogFeed = () => {
 
   return (
     <div className={blogFeedStyles.feedContainer}>
-      <div style={{margin: '16px'}}>Blog Posts</div>
+      <div style={{margin: '16px'}}>
+        Blog Posts
+        <div className={blogFeedStyles.border}></div>
+      </div>
       
       { data.allMarkdownRemark.nodes.map( (post) => {
         const { title, date, description, readTime, image } = post.frontmatter
