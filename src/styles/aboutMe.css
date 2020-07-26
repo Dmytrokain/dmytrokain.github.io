@@ -19,7 +19,9 @@
 }
 
 .about-border {
-  border: 3px solid black;
+  margin-top: 10px;
+  border-bottom: 4px solid rgb(246, 184, 129);
+  width: 260px;
 }
 
 .avatar {

@@ -23,20 +23,17 @@ const Header = () => {
   return (
     <nav>
       <ul className={headerStyles.navList}>
-          <li className={headerStyles.blogName}>
-            <Link to="/" style={{textDecoration: 'none', color: 'inherit'}}>
-              {title}
-            </Link>
-          </li>
-        <li>
-          <a href={twitterLink}>
-            <img className={headerStyles.navItem} src={TwitterIcon}/>
-          </a>
+        <li className={headerStyles.blogName}>
+          <Link to="/" style={{textDecoration: 'none', color: 'inherit'}}>
+            {title}
+          </Link>
         </li>
-        <li>
-          <a href={githubLink}>
-            <img className={headerStyles.navItem} src={GithubIcon}/>
-          </a>
+        <li className={headerStyles.navItem}>
+          <div>
+            <Link to="/aboutMe">
+              👨‍🦰 About me
+            </Link>
+          </div>
         </li>
       </ul>
     </nav>

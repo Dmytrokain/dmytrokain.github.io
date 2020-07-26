@@ -18,16 +18,12 @@
   font-size: 43px;
 }
 
-.nav-item {
-  width: 40px;
-  height: 40px;
-  margin-top: 7px;
-
-  border-radius: 50%;
-}
-
-.nav-item:hover {
-  background-color: tomato;
+.nav-item a{
+  display: block;
+  margin-top: 13px;
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
 }
 
 .dropdown {
