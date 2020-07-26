@@ -10,7 +10,7 @@ const PostCard = ({ title, date, description, readTime, image, slug }) => {
       <div>
       <div className={postCardStyles.imageWrapper}>
           {image && (
-            <Link to={slug} style={{margin: '0'}}>
+            <Link to={slug} style={{margin: '0', position: 'absolute'}}>
               <Image className={postCardStyles.image} fixed={image.childImageSharp.fixed} />
             </Link>
           )}
@@ -27,7 +27,8 @@ const PostCard = ({ title, date, description, readTime, image, slug }) => {
             </small>
 
           <p className={postCardStyles.postDescription}>{description}</p>
-        </header>
+          <Link to={slug} className={postCardStyles.readMore}>Read more &gt;</Link>
+        </header> 
         </div>
       </div>
       </div>

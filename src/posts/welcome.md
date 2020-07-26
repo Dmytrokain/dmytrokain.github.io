@@ -1,7 +1,7 @@
 ---
 title: "Ginger Blog Welcome"
 date: "Jun 25, 2020"
-description: "These instructions will get you a copy of the project up and running on your local machine for development and testing purposes."
+description: "These instructions will get you a copy of the project."
 readTime: 3
 image: './dnister.jpg'
 ---
