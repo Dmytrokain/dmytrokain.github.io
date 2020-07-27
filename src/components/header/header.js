@@ -4,6 +4,8 @@ import React from "react"
 import headerStyles from './header.module.css'
 import TwitterIcon from '../../images/twitter.png'
 import GithubIcon from '../../images/github.png'
+import DropdownIcon from '../../images/dropdown.png'
+
   
 const Header = () => {
   const data = useStaticQuery(graphql`
@@ -29,10 +31,18 @@ const Header = () => {
           </Link>
         </li>
         <li className={headerStyles.navItem}>
-          <div>
-            <Link to="/aboutMe">
-              👨‍🦰 About me
-            </Link>
+          <Link to="/aboutMe">
+            👨‍🦰 About me
+          </Link>
+        </li>
+        <li>
+          <div className={headerStyles.dropdown}>
+            <img src={DropdownIcon} style={{maxHeight: '40px', maxHeight: '40px'}} />
+              <div className={headerStyles.dropdownContent}>
+                <Link to="/aboutMe">
+                  About me
+                </Link>
+              </div>
           </div>
         </li>
       </ul>
