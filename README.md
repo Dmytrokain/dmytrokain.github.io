@@ -1,3 +1,0 @@
-# 👨🏻‍🦰 Welcome to Ginger Blog
-
-Details soon...
