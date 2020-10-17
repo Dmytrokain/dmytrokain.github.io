@@ -7,4 +7,5 @@
 
   min-height: calc(100vh - 82px - 51px);
   max-width: 960px;
+  font-weight: 300;
 }

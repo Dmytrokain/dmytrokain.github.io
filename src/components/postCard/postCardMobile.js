@@ -27,7 +27,7 @@ const PostCard = ({ title, date, description, readTime, image, slug }) => {
           </small>
 
           <p className={postCardStyles.postDescription}>{description}</p>
-          <Link to={slug} className={postCardStyles.readMore}>Read more</Link>
+          <Link to={slug} className={postCardStyles.readMore}>Read more &gt;</Link>
         </header>
       </div>
     </article>

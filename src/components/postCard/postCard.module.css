@@ -11,8 +11,8 @@ article {
   flex: 0 0 100%;
   padding-top: 15px;
   padding-right: 100px;
-  padding-left: 20px;
-  color: beige;
+  padding-left: 10px;
+  color: black;
 }
 
 .post-header {
@@ -21,20 +21,22 @@ article {
 
 .post-header a {
   font-size: 44px;
+  font-weight: 400;
   text-decoration: none;
   color: inherit;
 }
 
 .read-time {
-  font-size: 20px;
+  font-size: 17px;
+  font-weight: 100;
 }
 
 .post-description {
   font-size: 22px;
   line-height: 25px;
-  font-style: italic;
+  font-weight: 200;
   margin-top: 14px;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 
 .image {
@@ -50,28 +52,11 @@ article {
   width: 890px;
 }
 
-
-.image-overlay {
-  padding-top: 86px;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  opacity: 0;
-  transition: .5s ease;
-  border-radius: 5px;
-  top: 225px;
-  opacity: 1;
-  background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), rgb(219, 104, 37));
-  /* background-color: #cf773c; */
-}
-
 .read-more {
-  color: inherit;
+  font-size: 26px;
   text-decoration: none;
-  visibility: hidden;
-  opacity: 0;
+  font-weight: 200;
+  color: #2f89fc;
   transition: visibility 0s, opacity 0.5s linear;
 }
 
@@ -91,7 +76,7 @@ article {
   }
 
   .post-header-container {
-    padding-right: 10px;
+    padding: 0 10px 0 5px;
   }
 
   .post-header {
@@ -116,6 +101,10 @@ article {
   .image-wrapper {
     max-width: 47vh;
     max-height: 40vw;
+  }
+
+  .read-more {
+    font-size: 16px;
   }
 
   .image-overlay {  

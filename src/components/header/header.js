@@ -32,18 +32,8 @@ const Header = () => {
         </li>
         <li className={headerStyles.navItem}>
           <Link to="/aboutMe">
-            👨‍🦰 About me
+            About me
           </Link>
-        </li>
-        <li>
-          <div className={headerStyles.dropdown}>
-            <img src={DropdownIcon} style={{maxHeight: '40px', maxHeight: '40px'}} />
-              <div className={headerStyles.dropdownContent}>
-                <Link to="/aboutMe">
-                  About me
-                </Link>
-              </div>
-          </div>
         </li>
       </ul>
     </nav>

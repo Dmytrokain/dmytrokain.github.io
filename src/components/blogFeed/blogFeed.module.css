@@ -4,13 +4,26 @@
 }
 
 .feed-container div {
-  font-size: 40px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: bold;
+  font-size: 32px;
+  font-weight: 300;
 }
 
 .border {
   margin-top: 10px;
   border-bottom: 3px solid rgb(246, 184, 129);
   width: 210px;
+}
+
+.blog-feed-title {
+  margin: 16px;
+}
+
+@media (max-width: 480px) {
+  .feed-container {
+    padding-top: 1px;
+  }
+
+  .border {
+    display: none;
+  }
 }

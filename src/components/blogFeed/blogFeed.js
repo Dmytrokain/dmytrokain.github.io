@@ -34,8 +34,8 @@ const BlogFeed = () => {
 
   return (
     <div className={blogFeedStyles.feedContainer}>
-      <div style={{margin: '16px'}}>
-        Blog Posts
+      <div className={blogFeedStyles.blogFeedTitle}>
+        Recent Posts
         <div className={blogFeedStyles.border}></div>
       </div>
       
