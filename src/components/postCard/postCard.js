@@ -1,7 +1,10 @@
 import React, { createRef, useEffect } from "react"
-import { Link } from "gatsby"
+import { Link, navigate } from "gatsby"
+import {Route} from 'react-router'
 import postCardStyles from "./postCard.module.css"
 import Image from 'gatsby-image'
+import { withPrefix } from 'gatsby';
+
 
 const PostCard = ({ title, date, description, readTime, image, slug }) => {
 
@@ -10,7 +13,7 @@ const PostCard = ({ title, date, description, readTime, image, slug }) => {
       <div>
         <div className={postCardStyles.imageWrapper}>
           {image && (
-            <Link to={slug} style={{margin: '0', position: 'absolute'}}>
+            <Link to={withPrefix(slug)} style={{margin: '0', position: 'absolute'}}>
               <Image className={postCardStyles.image} fixed={image.childImageSharp.fixed} />
             </Link>
           )}
@@ -18,7 +21,7 @@ const PostCard = ({ title, date, description, readTime, image, slug }) => {
 
         <header className={postCardStyles.postHeaderContainer}>
           <h3 className={postCardStyles.postHeader}>
-            <Link to={slug}>
+            <Link to={withPrefix(slug)}>
               {title}
             </Link>
           </h3>
@@ -27,7 +30,7 @@ const PostCard = ({ title, date, description, readTime, image, slug }) => {
           </small>
 
           <p className={postCardStyles.postDescription}>{description}</p>
-          <Link to={slug} className={postCardStyles.readMore}>Read more</Link>
+          <Link to={withPrefix(slug)} className={postCardStyles.readMore}>Read more</Link>
         </header>
       </div>
     </article>

@@ -1,5 +1,6 @@
 ---
 title: "Gatsby for blog website"
+tags: ["general", "gatsby"]
 date: "Jun 28, 2020"
 description: "In this post I tell about my acquaintance with Gatsby"
 readTime: 3

@@ -31,6 +31,11 @@ const Header = () => {
           </Link>
         </li>
         <li className={headerStyles.navItem}>
+          <Link to="/webAnalytics">
+            Web Analytics 💻
+          </Link>
+        </li>
+        <li className={headerStyles.navItem}>
           <Link to="/aboutMe">
             About me
           </Link>

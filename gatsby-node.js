@@ -5,8 +5,12 @@ exports.onCreateNode = ({ node, actions }) => {
   
 
   if (node.internal.type === 'MarkdownRemark') {
-    const slug = path.basename(node.fileAbsolutePath, '.md')
-    // if (slug.includes('_')) return
+    const path_elements = node.fileAbsolutePath.split("/")
+
+    // Remove extentsion (.md) from filename
+    path_elements[path_elements.length - 1] = path.parse(path_elements[path_elements.length - 1]).name
+
+    const slug = path_elements.slice(path_elements.indexOf("posts") + 1).join("/")
 
     createNodeField({
       node,
