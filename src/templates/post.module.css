@@ -26,11 +26,17 @@
 .post-body p {
   line-height: 30px;
   font-size: 17px;  
-  padding-bottom: 10px;
+  padding-bottom: 4px;
 }
 
 .post-body li {
+  padding: 3px;
   margin-left: 20px;
+}
+
+.post-body ul {
+  margin-top: 6px;
+  font-size: 17px;
 }
 
 p > img {
